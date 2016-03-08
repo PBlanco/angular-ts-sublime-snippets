@@ -4,7 +4,7 @@ namespace ${1:Module} {
     'use strict';
 
     export class ${2:className} {
-        static \$inject: Array<string> = [${3:dependency1}];
+        static \$inject: Array<string> = ['${3:dependency1}'];
 
         constructor(private ${3:dependency1}: ${4:dependency1Type}) {
         }

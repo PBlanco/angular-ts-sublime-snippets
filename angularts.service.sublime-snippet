@@ -2,11 +2,11 @@
 <content><![CDATA[
 namespace ${1:Module} {
     'use strict';
-    
+
     export interface I${2:Service} {
     }
     export class ${2:Service} implements I${2:Service} {
-        static \$inject: Array<string> = [${3:dependency1}];
+        static \$inject: Array<string> = ['${3:dependency1}'];
 
         constructor(private ${3:dependency1}: ${4:dependency1Type}) {
         }
