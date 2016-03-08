@@ -1,0 +1,22 @@
+<snippet>
+<content><![CDATA[
+namespace ${1:Module} {
+    'use strict';
+    
+    export interface I${2:Service} {
+    }
+    export class ${2:Service} implements I${2:Service} {
+        static \$inject: Array<string> = [${3:dependency1}];
+
+        constructor(private ${3:dependency1}: ${4:dependency1Type}) {
+        }
+    }
+
+    angular
+        .module('${1:Module}')
+        .Service('${2:Service}', ${2:Service});
+}
+]]></content>
+<tabTrigger>ng1service</tabTrigger>
+<scope>source.ts</scope>
+</snippet>

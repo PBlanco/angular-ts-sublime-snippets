@@ -1,0 +1,14 @@
+<snippet>
+<content><![CDATA[
+namespace ${1:Module} {
+    'use strict';
+
+    angular
+        .module('${1:Module}',[
+            $0
+        ]);
+}
+]]></content>
+<tabTrigger>ng1module</tabTrigger>
+<scope>source.ts</scope>
+</snippet>

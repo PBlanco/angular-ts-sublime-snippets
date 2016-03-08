@@ -1,0 +1,20 @@
+<snippet>
+<content><![CDATA[
+namespace ${1:Module} {
+    'use strict';
+
+    export class ${2:className} {
+        static \$inject: Array<string> = [${3:dependency1}];
+
+        constructor(private ${3:dependency1}: ${4:dependency1Type}) {
+        }
+    }
+
+    angular
+        .module('${1:Module}')
+        .controller('${2:Controller}', ${2:Controller});
+}
+]]></content>
+<tabTrigger>ng1controller</tabTrigger>
+<scope>source.ts</scope>
+</snippet>
