@@ -1,0 +1,29 @@
+<snippet>
+<content><![CDATA[
+namespace ${1:Module} {
+    'use strict';
+
+    export interface I${2:ResourceName} {
+    }
+
+    ${3:resourceName}Factory.\$inject = ['\$resource'];
+
+    /* @ngInject */
+    export function ${3:resourceName}Factory(\$resource: ng.resource.IResourceService): I${2:ResourceName} {
+        let ${2:ResourceName} = \$resource('${5:endpoint}');
+
+        angular.extend(${2:ResourceName}.prototype, {
+            ${6}
+        });
+
+        return ${2:ResourceName};
+    }
+
+    angular
+        .module('${1:Module}')
+        .service('${2:ResourceName}', ${3:resourceName}Factory);
+}
+]]></content>
+<tabTrigger>ng1resource</tabTrigger>
+<scope>source.ts</scope>
+</snippet>

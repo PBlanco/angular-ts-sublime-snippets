@@ -1,0 +1,22 @@
+<snippet>
+<content><![CDATA[
+namespace ${1:module} {
+    'use strict';
+
+    export interface I${2:IComponentName}ComponentBindings {
+    }
+
+    const ${3:componentName}: ng.IComponentOptions = {
+        bindings: {},
+        controller: '${4:controllerCtrl}',
+        templateUrl: '${5:path/to/template.html}'
+    };
+    
+    angular
+        .module('${1:module}')
+        .component('${3:componentName}', ${3:componentName});
+}
+]]></content>
+<tabTrigger>ng1component</tabTrigger>
+<scope>source.ts</scope>
+</snippet>

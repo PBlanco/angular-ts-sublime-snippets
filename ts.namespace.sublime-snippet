@@ -3,12 +3,9 @@
 namespace ${1:Module} {
     'use strict';
 
-    angular
-        .module('${1:Module}', [
-            $0
-        ]);
+    ${2:code} 
 }
 ]]></content>
-<tabTrigger>ng1module</tabTrigger>
+<tabTrigger>namespace</tabTrigger>
 <scope>source.ts</scope>
 </snippet>

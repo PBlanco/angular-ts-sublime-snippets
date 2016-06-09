@@ -1,0 +1,21 @@
+<snippet>
+<content><![CDATA[
+namespace ${1:module} {
+    'use strict';
+
+    export interface I${2:Controller}ComponentController extends I${2:Controller}ComponentBindings {
+    }
+
+    export class I${2:Controller}ComponentController implements I${2:Controller}ComponentController {
+        static $inject: Array<string> = [${3}];
+        constructor(${4}){}
+    }
+    
+    angular
+        .module('${1:module}')
+        .component('${2:Controller}ComponentController', ${2:Controller}ComponentController);
+}
+]]></content>
+<tabTrigger>ng1componentController</tabTrigger>
+<scope>source.ts</scope>
+</snippet>

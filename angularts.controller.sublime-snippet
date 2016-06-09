@@ -3,16 +3,20 @@
 namespace ${1:Module} {
     'use strict';
 
-    export class ${2:className} {
-        static \$inject: Array<string> = ['${3:dependency1}'];
+    export interface I${2:ClassName}Controller {
 
-        constructor(private ${3:dependency1}: ${4:dependency1Type}) {
+    }
+
+    export class ${2:ClassName}Controller {
+        static \$inject: Array<string> = [${3:dependencies}];
+
+        constructor(${4:dependencies}) {
         }
     }
 
     angular
         .module('${1:Module}')
-        .controller('${2:Controller}', ${2:Controller});
+        .controller('${2:ClassName}Controller', ${2:ClassName}Controller);
 }
 ]]></content>
 <tabTrigger>ng1controller</tabTrigger>

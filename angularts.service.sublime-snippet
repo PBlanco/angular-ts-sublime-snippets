@@ -6,15 +6,15 @@ namespace ${1:Module} {
     export interface I${2:Service} {
     }
     export class ${2:Service} implements I${2:Service} {
-        static \$inject: Array<string> = ['${3:dependency1}'];
+        static \$inject: Array<string> = [${3:dependencies}];
 
-        constructor(private ${3:dependency1}: ${4:dependency1Type}) {
+        constructor(${4:dependencies}) {
         }
     }
 
     angular
         .module('${1:Module}')
-        .Service('${2:Service}', ${2:Service});
+        .service('${5:service}', ${2:Service});
 }
 ]]></content>
 <tabTrigger>ng1service</tabTrigger>
